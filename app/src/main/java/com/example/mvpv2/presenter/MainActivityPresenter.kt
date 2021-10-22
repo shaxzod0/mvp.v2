@@ -1,6 +1,6 @@
 package com.example.mvp.presenter
 
-import com.example.mvp.contract.ContractInterface
+import com.example.mvpv2.contract.ContractInterface
 import com.example.mvp.model.MainActivityModel
 
 
@@ -23,6 +23,15 @@ class MainActivityPresenter(_view: ContractInterface.View): ContractInterface.Pr
         view.updateViewData()
     }
 
+    override fun resetValue() {
+        model.resetCounter()
+        view.updateViewData()
+    }
+
     override fun getCounter() = model.getCounter().toString()
+    override fun plusTen() {
+        model.plusTen()
+        view.updateViewData()
+    }
 
 }
