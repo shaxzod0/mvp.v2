@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity(), ContractInterface.View {
         bottom_navigation.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.home -> {replaceFragment(homeFragment)}
-                R.id.hotel->{replaceFragment(hotelsFragment)}
                 R.id.tours->{replaceFragment(toursFragment)}
             }
             true
